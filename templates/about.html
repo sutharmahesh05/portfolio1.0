@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}About - My Portfolio{% endblock %}
+
+{% block header %}About Me{% endblock %}
+{% block subheader %}Learn more about my skills and experience{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-8">
+    <div class="flex flex-col md:flex-row items-center md:items-start">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-full w-32 h-32 mb-4 md:mb-0 md:mr-8">
+        <div>
+            <h2 class="text-3xl font-semibold mb-4 text-gray-800">John Doe</h2>
+            <p class="text-gray-600 mb-6">
+                I'm a passionate web developer with experience in Python, JavaScript, and various web technologies. I love creating
+                efficient and user-friendly applications that solve real-world problems.
+            </p>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Skills</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 rounded-lg p-3 text-center">
+                    <span class="text-primary font-semibold">Python</span>
+                    <p class="text-sm text-gray-600">Flask, Django</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-3 text-center">
+                    <span class="text-primary font-semibold">JavaScript</span>
+                    <p class="text-sm text-gray-600">React, Vue.js</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-3 text-center">
+                    <span class="text-primary font-semibold">HTML & CSS</span>
+                    <p class="text-sm text-gray-600">Responsive Design</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-3 text-center">
+                    <span class="text-primary font-semibold">Databases</span>
+                    <p class="text-sm text-gray-600">SQL, MongoDB</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-3 text-center">
+                    <span class="text-primary font-semibold">Version Control</span>
+                    <p class="text-sm text-gray-600">Git, GitHub</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-3 text-center">
+                    <span class="text-primary font-semibold">DevOps</span>
+                    <p class="text-sm text-gray-600">Docker, CI/CD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
