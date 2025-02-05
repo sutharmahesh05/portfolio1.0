@@ -18,60 +18,18 @@
         }
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
         body {
+            font-family: 'Poppins', sans-serif;
             background-color: #ffffff;
             color: #000000;
         }
 
-        .profile-container {
-            background: #ffffff;
-            padding: 50px;
-            border-radius: 0;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 400px;
-            height: 400px;
-            object-fit: cover;
-            margin-bottom: 30px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-name {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-top: 15px;
-            color: #000000;
-        }
-
-        .bg-gradient {
-            background: #f0f0f0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #000000;
+        .gradient-text {
+            background: linear-gradient(45deg, #000, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .nav-link {
@@ -93,8 +51,15 @@
         .nav-link:hover::after {
             transform: scaleX(1);
         }
+        
+
+        
     </style>
 </head>
+<head>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+</head>
+
 <body class="min-h-screen flex flex-col">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
@@ -103,7 +68,7 @@
                 <div class="flex space-x-7">
                     <div>
                         <a href="/" class="flex items-center py-4 px-2">
-                            <span class="font-semibold text-black text-lg">Maheshh05</span>
+                            <span class="font-semibold text-black text-lg">Maheshh</span>
                         </a>
                     </div>
                 </div>
@@ -116,42 +81,41 @@
         </div>
     </nav>
 
-    <!-- Profile Section -->
-    <div class="bg-gradient">
-        <div class="profile-container">
-            <div class="image-container">
-                <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Profile Picture" class="profile-img">
-            </div>
-            <h1 class="profile-name">Suthar Mahesh</h1>
-            <p class="text-xl text-gray-700">Web Developer | Freelancer | Tech Enthusiast</p>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <div class="container mx-auto mt-8 px-4 py-8 bg-white shadow-lg">
+    <div class="flex-grow">
         {% block content %}{% endblock %}
     </div>
 
     <!-- Footer -->
     <footer class="bg-black text-white mt-12">
         <div class="max-w-6xl mx-auto py-8 px-4 flex flex-col md:flex-row justify-between items-center">
+            <!-- Brand Info -->
             <div class="text-center md:text-left mb-4 md:mb-0">
-                <h2 class="text-2xl font-bold">Maheshh</h2>
-                <p>Showcasing my best Projects</p>
-
+                <h2 class="text-3xl font-bold tracking-wide">Maheshh</h2>
+                <p class="text-gray-400">Showcasing my best work</p>
             </div>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-gray-300 transition duration-300">LinkedIn</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">GitHub</a>
-                <a href="#" class="hover:text-gray-300 transition duration-300">Twitter</a>
+    
+            <!-- Social Media Icons -->
+            <div class="flex space-x-6 mt-4 text-3xl">
+                <a href="#" class="hover:text-blue-500 transition duration-300">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition duration-300">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
         </div>
-        <div class="bg-gray-900 py-4">
-            <div class="max-w-6xl mx-auto px-4 text-center text-gray-400">
-                &copy; 2024 . All rights reserved.
-            </div>
+    
+        <!-- Bottom Copyright -->
+        <div class="text-center py-4 text-gray-500 text-sm border-t border-gray-700">
+            © 2025 Maheshh. All Rights Reserved.
         </div>
     </footer>
+    
 </body>
+
 </html>
 

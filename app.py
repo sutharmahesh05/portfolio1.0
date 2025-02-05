@@ -30,34 +30,29 @@ with app.app_context():
 # Sample project data
 projects = [
     {
-        'title': 'E-commerce Platform',
-        'description': 'A full-stack e-commerce solution built with Django and React.',
-        'image': 'https://via.placeholder.com/300x200.png?text=E-commerce+Platform',
-        'url': 'https://github.com/yourusername/ecommerce-platform'
-    },
-    {
-        'title': 'Weather App',
-        'description': 'A responsive weather application using OpenWeatherMap API and Vue.js.',
-        'image': 'https://via.placeholder.com/300x200.png?text=Weather+App',
-        'url': 'https://github.com/yourusername/weather-app'
-    },
-    {
-        'title': 'Task Manager',
-        'description': 'A Flask-based task management system with user authentication.',
-        'image': 'https://via.placeholder.com/300x200.png?text=Task+Manager',
-        'url': 'https://github.com/yourusername/task-manager'
-    },
-    {
-        'title': 'Portfolio Website',
-        'description': 'This very portfolio, built with Flask and Tailwind CSS.',
-        'image': 'https://via.placeholder.com/300x200.png?text=Portfolio+Website',
-        'url': 'https://github.com/yourusername/portfolio-website'
+        'title': 'ReadPalm',
+        'description': 'A platform for readers and knowledge seekers.',
+        'image': '/static/img/readpalm.png',
+        'url': 'https://readpalm.vercel.app'
     }
+    # {
+    #     'title': 'Weather App',
+    #     'description': 'A responsive weather application using OpenWeatherMap API and Vue.js.',
+    #     'image': 'https://via.placeholder.com/600x400.png?text=Weather+App',
+    #     'url': 'https://github.com/yourusername/weather-app'
+    # },
+    # {
+    #     'title': 'Task Manager',
+    #     'description': 'A Flask-based task management system with user authentication.',
+    #     'image': 'https://via.placeholder.com/600x400.png?text=Task+Manager',
+    #     'url': 'https://github.com/yourusername/task-manager'
+    # }
 ]
 
 @app.route('/')
 def index():
-    return render_template('index.html', projects=projects)
+    email = "maheshsuthar242@gmail.com"  # Replace with your actual email
+    return render_template('index.html', projects=projects, email=email)
 
 @app.route('/about')
 def about():
